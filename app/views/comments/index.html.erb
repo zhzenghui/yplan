@@ -1,0 +1,55 @@
+<h1>Listing comments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Comment id</th>
+      <th>Comment post id</th>
+      <th>Comment author</th>
+      <th>Comment author email</th>
+      <th>Comment author url</th>
+      <th>Comment author ip</th>
+      <th>Comment date</th>
+      <th>Comment date gmt</th>
+      <th>Comment content</th>
+      <th>Comment karma</th>
+      <th>Comment approved</th>
+      <th>Comment agent</th>
+      <th>Comment type</th>
+      <th>Comment parent</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= comment.comment_ID %></td>
+        <td><%= comment.comment_post_ID %></td>
+        <td><%= comment.comment_author %></td>
+        <td><%= comment.comment_author_email %></td>
+        <td><%= comment.comment_author_url %></td>
+        <td><%= comment.comment_author_IP %></td>
+        <td><%= comment.comment_date %></td>
+        <td><%= comment.comment_date_gmt %></td>
+        <td><%= comment.comment_content %></td>
+        <td><%= comment.comment_karma %></td>
+        <td><%= comment.comment_approved %></td>
+        <td><%= comment.comment_agent %></td>
+        <td><%= comment.comment_type %></td>
+        <td><%= comment.comment_parent %></td>
+        <td><%= comment.user_id %></td>
+        <td><%= link_to 'Show', comment %></td>
+        <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
+        <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Comment', new_comment_path %>

@@ -1,0 +1,33 @@
+<%= form_for(@postmetum) do |f| %>
+  <% if @postmetum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@postmetum.errors.count, "error") %> prohibited this postmetum from being saved:</h2>
+
+      <ul>
+      <% @postmetum.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :meta_id %><br>
+    <%= f.number_field :meta_id %>
+  </div>
+  <div class="field">
+    <%= f.label :post_id %><br>
+    <%= f.number_field :post_id %>
+  </div>
+  <div class="field">
+    <%= f.label :meta_key %><br>
+    <%= f.text_field :meta_key %>
+  </div>
+  <div class="field">
+    <%= f.label :meta_value %><br>
+    <%= f.text_area :meta_value %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

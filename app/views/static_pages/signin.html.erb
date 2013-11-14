@@ -1,0 +1,14 @@
+<h1>StaticPages#signin</h1>
+
+<h1>Admin Login</h1>
+<%= form_tag signin_path do -%>
+  <label for="login">Login</label>
+  <%= text_field_tag :user_login, params[:user_login] %>
+  <label for="password">Password</label>
+  <%= password_field_tag :password, params[:password] %>
+  
+  <%= submit_tag "Login"%>
+<% end %>
+
+
+<p>Find me in app/views/static_pages/signin.html.erb</p>

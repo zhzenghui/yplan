@@ -1,0 +1,109 @@
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :post_id %><br>
+    <%= f.number_field :post_id %>
+  </div>
+  <div class="field">
+    <%= f.label :post_author %><br>
+    <%= f.number_field :post_author %>
+  </div>
+  <div class="field">
+    <%= f.label :post_date %><br>
+    <%= f.datetime_select :post_date %>
+  </div>
+  <div class="field">
+    <%= f.label :post_date_gmt %><br>
+    <%= f.datetime_select :post_date_gmt %>
+  </div>
+  <div class="field">
+    <%= f.label :post_content %><br>
+    <%= f.text_area :post_content %>
+  </div>
+  <div class="field">
+    <%= f.label :post_title %><br>
+    <%= f.text_area :post_title %>
+  </div>
+  <div class="field">
+    <%= f.label :post_excerpt %><br>
+    <%= f.text_area :post_excerpt %>
+  </div>
+  <div class="field">
+    <%= f.label :post_status %><br>
+    <%= f.text_field :post_status %>
+  </div>
+  <div class="field">
+    <%= f.label :comment_status %><br>
+    <%= f.text_field :comment_status %>
+  </div>
+  <div class="field">
+    <%= f.label :ping_status %><br>
+    <%= f.text_field :ping_status %>
+  </div>
+  <div class="field">
+    <%= f.label :post_password %><br>
+    <%= f.text_field :post_password %>
+  </div>
+  <div class="field">
+    <%= f.label :post_name %><br>
+    <%= f.text_field :post_name %>
+  </div>
+  <div class="field">
+    <%= f.label :to_ping %><br>
+    <%= f.text_area :to_ping %>
+  </div>
+  <div class="field">
+    <%= f.label :pinged %><br>
+    <%= f.text_area :pinged %>
+  </div>
+  <div class="field">
+    <%= f.label :post_modified %><br>
+    <%= f.datetime_select :post_modified %>
+  </div>
+  <div class="field">
+    <%= f.label :post_modified_gmt %><br>
+    <%= f.datetime_select :post_modified_gmt %>
+  </div>
+  <div class="field">
+    <%= f.label :post_content_filtered %><br>
+    <%= f.text_area :post_content_filtered %>
+  </div>
+  <div class="field">
+    <%= f.label :post_parent %><br>
+    <%= f.number_field :post_parent %>
+  </div>
+  <div class="field">
+    <%= f.label :guid %><br>
+    <%= f.text_field :guid %>
+  </div>
+  <div class="field">
+    <%= f.label :menu_order %><br>
+    <%= f.number_field :menu_order %>
+  </div>
+  <div class="field">
+    <%= f.label :post_type %><br>
+    <%= f.text_field :post_type %>
+  </div>
+  <div class="field">
+    <%= f.label :post_mime_type %><br>
+    <%= f.text_field :post_mime_type %>
+  </div>
+  <div class="field">
+    <%= f.label :comment_count %><br>
+    <%= f.number_field :comment_count %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

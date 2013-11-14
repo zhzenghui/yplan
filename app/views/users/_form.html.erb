@@ -1,0 +1,57 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_login %><br>
+    <%= f.text_field :user_login %>
+  </div>
+  <div class="field">
+    <%= f.label :user_pass %><br>
+    <%= f.text_field :user_pass %>
+  </div>
+  <div class="field">
+    <%= f.label :user_nicename %><br>
+    <%= f.text_field :user_nicename %>
+  </div>
+  <div class="field">
+    <%= f.label :user_email %><br>
+    <%= f.email_field :user_email %>
+  </div>
+  <div class="field">
+    <%= f.label :user_url %><br>
+    <%= f.text_field :user_url %>
+  </div>
+  <div class="field">
+    <%= f.label :user_registered %><br>
+    <%= f.datetime_select :user_registered %>
+  </div>
+  <div class="field">
+    <%= f.label :user_activation_key %><br>
+    <%= f.text_field :user_activation_key %>
+  </div>
+  <div class="field">
+    <%= f.label :user_status %><br>
+    <%= f.number_field :user_status %>
+  </div>
+  <div class="field">
+    <%= f.label :display_name %><br>
+    <%= f.text_field :display_name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

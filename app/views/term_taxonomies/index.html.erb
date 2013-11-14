@@ -1,0 +1,37 @@
+<h1>Listing term_taxonomies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Term taxonomy</th>
+      <th>Term</th>
+      <th>Taxonomy</th>
+      <th>Description</th>
+      <th>Parent</th>
+      <th>Count</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @term_taxonomies.each do |term_taxonomy| %>
+      <tr>
+        <td><%= term_taxonomy.term_taxonomy_id %></td>
+        <td><%= term_taxonomy.term_id %></td>
+        <td><%= term_taxonomy.taxonomy %></td>
+        <td><%= term_taxonomy.description %></td>
+        <td><%= term_taxonomy.parent %></td>
+        <td><%= term_taxonomy.count %></td>
+        <td><%= link_to 'Show', term_taxonomy %></td>
+        <td><%= link_to 'Edit', edit_term_taxonomy_path(term_taxonomy) %></td>
+        <td><%= link_to 'Destroy', term_taxonomy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Term taxonomy', new_term_taxonomy_path %>

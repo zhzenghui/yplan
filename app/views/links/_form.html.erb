@@ -1,0 +1,73 @@
+<%= form_for(@link) do |f| %>
+  <% if @link.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@link.errors.count, "error") %> prohibited this link from being saved:</h2>
+
+      <ul>
+      <% @link.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :link_id %><br>
+    <%= f.number_field :link_id %>
+  </div>
+  <div class="field">
+    <%= f.label :link_url %><br>
+    <%= f.text_field :link_url %>
+  </div>
+  <div class="field">
+    <%= f.label :link_name %><br>
+    <%= f.text_field :link_name %>
+  </div>
+  <div class="field">
+    <%= f.label :link_image %><br>
+    <%= f.text_field :link_image %>
+  </div>
+  <div class="field">
+    <%= f.label :link_target %><br>
+    <%= f.text_field :link_target %>
+  </div>
+  <div class="field">
+    <%= f.label :link_description %><br>
+    <%= f.text_field :link_description %>
+  </div>
+  <div class="field">
+    <%= f.label :link_visible %><br>
+    <%= f.text_field :link_visible %>
+  </div>
+  <div class="field">
+    <%= f.label :link_owner %><br>
+    <%= f.number_field :link_owner %>
+  </div>
+  <div class="field">
+    <%= f.label :link_rating %><br>
+    <%= f.number_field :link_rating %>
+  </div>
+  <div class="field">
+    <%= f.label :link_updated %><br>
+    <%= f.date_select :link_updated %>
+  </div>
+  <div class="field">
+    <%= f.label :time %><br>
+    <%= f.text_field :time %>
+  </div>
+  <div class="field">
+    <%= f.label :link_rel %><br>
+    <%= f.text_field :link_rel %>
+  </div>
+  <div class="field">
+    <%= f.label :link_notes %><br>
+    <%= f.text_area :link_notes %>
+  </div>
+  <div class="field">
+    <%= f.label :link_rss %><br>
+    <%= f.text_field :link_rss %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+<h1>Listing usermeta</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Umeta</th>
+      <th>User</th>
+      <th>Meta key</th>
+      <th>Meta value</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @usermeta.each do |usermetum| %>
+      <tr>
+        <td><%= usermetum.umeta_id %></td>
+        <td><%= usermetum.user_id %></td>
+        <td><%= usermetum.meta_key %></td>
+        <td><%= usermetum.meta_value %></td>
+        <td><%= link_to 'Show', usermetum %></td>
+        <td><%= link_to 'Edit', edit_usermetum_path(usermetum) %></td>
+        <td><%= link_to 'Destroy', usermetum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Usermetum', new_usermetum_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Meta:</strong>
+  <%= @commentmetum.meta_id %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @commentmetum.comment_id %>
+</p>
+
+<p>
+  <strong>Meta key:</strong>
+  <%= @commentmetum.meta_key %>
+</p>
+
+<p>
+  <strong>Meta value:</strong>
+  <%= @commentmetum.meta_value %>
+</p>
+
+<%= link_to 'Edit', edit_commentmetum_path(@commentmetum) %> |
+<%= link_to 'Back', commentmeta_path %>

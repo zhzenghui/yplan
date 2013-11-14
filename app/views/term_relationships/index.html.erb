@@ -1,0 +1,31 @@
+<h1>Listing term_relationships</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Object</th>
+      <th>Term taxonomy</th>
+      <th>Term order</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @term_relationships.each do |term_relationship| %>
+      <tr>
+        <td><%= term_relationship.object_id %></td>
+        <td><%= term_relationship.term_taxonomy_id %></td>
+        <td><%= term_relationship.term_order %></td>
+        <td><%= link_to 'Show', term_relationship %></td>
+        <td><%= link_to 'Edit', edit_term_relationship_path(term_relationship) %></td>
+        <td><%= link_to 'Destroy', term_relationship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Term relationship', new_term_relationship_path %>

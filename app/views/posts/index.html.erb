@@ -1,0 +1,74 @@
+<h1>Listing posts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Post</th>
+      <th>Post author</th>
+      <th>Post date</th>
+      <th>Post date gmt</th>
+      <th>Post content</th>
+      <th>Post title</th>
+      <th>Post excerpt</th>
+      <th>Post status</th>
+      <th>Comment status</th>
+      <th>Ping status</th>
+      <th>Post password</th>
+      <th>Post name</th>
+      <th>To ping</th>
+      <th>Pinged</th>
+      <th>Post modified</th>
+      <th>Post modified gmt</th>
+      <th>Post content filtered</th>
+      <th>Post parent</th>
+      <th>Guid</th>
+      <th>Menu order</th>
+      <th>Post type</th>
+      <th>Post mime type</th>
+      <th>Comment count</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.post_id %></td>
+        <td><%= post.post_author %></td>
+        <td><%= post.post_date %></td>
+        <td><%= post.post_date_gmt %></td>
+        <td><%= post.post_content %></td>
+        <td><%= post.post_title %></td>
+        <td><%= post.post_excerpt %></td>
+        <td><%= post.post_status %></td>
+        <td><%= post.comment_status %></td>
+        <td><%= post.ping_status %></td>
+        <td><%= post.post_password %></td>
+        <td><%= post.post_name %></td>
+        <td><%= post.to_ping %></td>
+        <td><%= post.pinged %></td>
+        <td><%= post.post_modified %></td>
+        <td><%= post.post_modified_gmt %></td>
+        <td><%= post.post_content_filtered %></td>
+        <td><%= post.post_parent %></td>
+        <td><%= post.guid %></td>
+        <td><%= post.menu_order %></td>
+        <td><%= post.post_type %></td>
+        <td><%= post.post_mime_type %></td>
+        <td><%= post.comment_count %></td>
+        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+		
+		
+  </tbody>
+</table>
+<%= will_paginate @posts %>
+
+<br>
+
+<%= link_to 'New Post', new_post_path %>

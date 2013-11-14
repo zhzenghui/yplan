@@ -1,0 +1,53 @@
+<h1>Listing links</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Link</th>
+      <th>Link url</th>
+      <th>Link name</th>
+      <th>Link image</th>
+      <th>Link target</th>
+      <th>Link description</th>
+      <th>Link visible</th>
+      <th>Link owner</th>
+      <th>Link rating</th>
+      <th>Link updated</th>
+      <th>Time</th>
+      <th>Link rel</th>
+      <th>Link notes</th>
+      <th>Link rss</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @links.each do |link| %>
+      <tr>
+        <td><%= link.link_id %></td>
+        <td><%= link.link_url %></td>
+        <td><%= link.link_name %></td>
+        <td><%= link.link_image %></td>
+        <td><%= link.link_target %></td>
+        <td><%= link.link_description %></td>
+        <td><%= link.link_visible %></td>
+        <td><%= link.link_owner %></td>
+        <td><%= link.link_rating %></td>
+        <td><%= link.link_updated %></td>
+        <td><%= link.time %></td>
+        <td><%= link.link_rel %></td>
+        <td><%= link.link_notes %></td>
+        <td><%= link.link_rss %></td>
+        <td><%= link_to 'Show', link %></td>
+        <td><%= link_to 'Edit', edit_link_path(link) %></td>
+        <td><%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Link', new_link_path %>

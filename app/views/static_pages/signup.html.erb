@@ -1,0 +1,14 @@
+<h1>Admin Signup</h1>
+<%= form_tag sessions_path do -%>
+  <label for="login">Login</label>
+  <%= text_field_tag :user_login, params[:user_login] %>
+  
+	<label for="email">email</label>
+  <%= email_field_tag :user_email, params[:user_email] %>
+	
+	<label for="password">Password</label>
+  <%= password_field_tag :password, params[:password] %>
+  
+  <br />
+  <%= submit_tag "Login"%>
+<% end %>

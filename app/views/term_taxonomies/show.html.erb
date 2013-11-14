@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Term taxonomy:</strong>
+  <%= @term_taxonomy.term_taxonomy_id %>
+</p>
+
+<p>
+  <strong>Term:</strong>
+  <%= @term_taxonomy.term_id %>
+</p>
+
+<p>
+  <strong>Taxonomy:</strong>
+  <%= @term_taxonomy.taxonomy %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @term_taxonomy.description %>
+</p>
+
+<p>
+  <strong>Parent:</strong>
+  <%= @term_taxonomy.parent %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @term_taxonomy.count %>
+</p>
+
+<%= link_to 'Edit', edit_term_taxonomy_path(@term_taxonomy) %> |
+<%= link_to 'Back', term_taxonomies_path %>

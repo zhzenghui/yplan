@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Term:</strong>
+  <%= @term.term_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @term.name %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @term.slug %>
+</p>
+
+<p>
+  <strong>Term group:</strong>
+  <%= @term.term_group %>
+</p>
+
+<%= link_to 'Edit', edit_term_path(@term) %> |
+<%= link_to 'Back', terms_path %>

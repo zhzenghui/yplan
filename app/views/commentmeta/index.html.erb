@@ -1,0 +1,33 @@
+<h1>Listing commentmeta</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Meta</th>
+      <th>Comment</th>
+      <th>Meta key</th>
+      <th>Meta value</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @commentmeta.each do |commentmetum| %>
+      <tr>
+        <td><%= commentmetum.meta_id %></td>
+        <td><%= commentmetum.comment_id %></td>
+        <td><%= commentmetum.meta_key %></td>
+        <td><%= commentmetum.meta_value %></td>
+        <td><%= link_to 'Show', commentmetum %></td>
+        <td><%= link_to 'Edit', edit_commentmetum_path(commentmetum) %></td>
+        <td><%= link_to 'Destroy', commentmetum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Commentmetum', new_commentmetum_path %>

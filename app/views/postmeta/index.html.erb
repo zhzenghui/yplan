@@ -1,0 +1,33 @@
+<h1>Listing postmeta</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Meta</th>
+      <th>Post</th>
+      <th>Meta key</th>
+      <th>Meta value</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @postmeta.each do |postmetum| %>
+      <tr>
+        <td><%= postmetum.meta_id %></td>
+        <td><%= postmetum.post_id %></td>
+        <td><%= postmetum.meta_key %></td>
+        <td><%= postmetum.meta_value %></td>
+        <td><%= link_to 'Show', postmetum %></td>
+        <td><%= link_to 'Edit', edit_postmetum_path(postmetum) %></td>
+        <td><%= link_to 'Destroy', postmetum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Postmetum', new_postmetum_path %>

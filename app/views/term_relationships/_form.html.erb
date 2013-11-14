@@ -1,0 +1,29 @@
+<%= form_for(@term_relationship) do |f| %>
+  <% if @term_relationship.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@term_relationship.errors.count, "error") %> prohibited this term_relationship from being saved:</h2>
+
+      <ul>
+      <% @term_relationship.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :object_id %><br>
+    <%= f.number_field :object_id %>
+  </div>
+  <div class="field">
+    <%= f.label :term_taxonomy_id %><br>
+    <%= f.number_field :term_taxonomy_id %>
+  </div>
+  <div class="field">
+    <%= f.label :term_order %><br>
+    <%= f.number_field :term_order %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Object:</strong>
+  <%= @term_relationship.object_id %>
+</p>
+
+<p>
+  <strong>Term taxonomy:</strong>
+  <%= @term_relationship.term_taxonomy_id %>
+</p>
+
+<p>
+  <strong>Term order:</strong>
+  <%= @term_relationship.term_order %>
+</p>
+
+<%= link_to 'Edit', edit_term_relationship_path(@term_relationship) %> |
+<%= link_to 'Back', term_relationships_path %>
