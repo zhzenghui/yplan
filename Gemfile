@@ -34,6 +34,20 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# Mongodb GridFS
+gem 'carrierwave'
+gem 'mini_magick'
+
+
+# Mongoid 辅助插件
+
+gem "mongoid", github: 'mongoid/mongoid', ref: '11e45e5a30a45458b83db99ab6c9d9ccc337e66f'
+gem 'bson_ext'
+gem 'mongoid_auto_increment_id', "0.6.2"
+gem 'mongoid_rails_migrations', '1.0.0'
+
+gem 'rails_autolink'
+
 
 # 分页
 gem 'will_paginate', '~> 3.0'
@@ -61,7 +75,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 
 
-gem 'puma'
+# gem 'puma'
 
 
 # Use unicorn as the app server

@@ -4699,3 +4699,7 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-14 15:44:26
 
 
 Started GET "/assets/terms.js?body=1" for 127.0.0.1 at 2013-11-14 15:44:26 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAvatarToUsers (20131114114710)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAvatarToUsers (20131114114710)
